@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yt-rip</title>
+</head>
+<body>
+    <div id="ass"></div>
+    <script>
+        const kissmyass = document.getElementById("ass");
+        const fragment = new URLSearchParams(window.location.search.slice(1));
+        const src = fragment.get('v');
+
+        if(!src) {
+            kissmyass.innerHTML = "no signal"
+        } else {
+            kissmyass.innerHTML = `<img src="https://i.ytimg.com/vi/${src}/hqdefault.jpg" style="width: 100%;">`
+        }
+    </script>
+</body>
+</html>
